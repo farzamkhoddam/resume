@@ -1,0 +1,23 @@
+.contact-icons {
+  box-sizing: content-box;
+  width: 1.5rem;
+  height: auto;
+  color: var(--color-primary);
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.contact-icons:hover {
+  color: var(--color-third);
+}
+.star {
+  background-color: gray;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-sizing: content-box;
+  color: #fff574;
+  flex-shrink: 0;
+}
+.white-color {
+  color: white;
+}

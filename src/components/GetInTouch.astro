@@ -1,0 +1,146 @@
+---
+import { GithubIcon } from "./React/Icons/GithubIcon";
+import { LinkedInIcon } from "./React/Icons/LinkedInIcon";
+import { TelegramIcon } from "./React/Icons/TelegramIcon";
+
+const PDF = "/CV.pdf";
+---
+
+<div class="overflow-hidden">
+  <section class="w-full mb-60 overflow-hidden relative">
+    <span class="dot"></span>
+    <header
+      class="header col-start-2 w-full flex flex-col justify-start items-start">
+      <h2>Get In Touch</h2>
+    </header>
+    <div class="content">
+      <a class="resume-container relative" href={PDF} target="_blank">
+        <!-- <a class="absolute inset-0 w-full h-full z-100 cursor-pointer" target="_blank" href={PDF}></a> -->
+        <figure>
+          <object data={PDF} type="application/pdf" width="100%"></object>
+        </figure>
+        <div>
+          <button class="btn btn-outline">
+            <p>Download resume</p>
+            <!-- <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" /> -->
+          </button>
+        </div>
+      </a>
+    </div>
+    <div class="sub-title container col-start-2">
+      <div class="contact">
+        <h3>Email</h3>
+        <a class="link" href="mailto:farzamfara85@gmail.com"
+          >Farzamfara85@gmail.com</a
+        >
+      </div>
+      <div class="contact">
+        <h3>Phone</h3>
+        <p>[IR] +98 939 177 6213</p>
+      </div>
+      <div class="contact">
+        <h3>Address</h3>
+        <p>Iran / Gorgan</p>
+      </div>
+      <div class="contact">
+        <h3>Elsewhere</h3>
+        <div class="flex gap-4">
+          <a
+            href="https://www.linkedin.com/in/farzam-khoddam-b3a80a23a/"
+            target="_blank"><LinkedInIcon /></a
+          >
+          <a href="https://t.me/Farzam1385" target="_blank"><TelegramIcon /></a>
+          <a href="https://github.com/farzamkhoddam" target="_blank"
+            ><GithubIcon /></a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<style>
+  .link {
+    color: var(--color-third);
+    border-bottom: 1px dotted var(--color-primary);
+    text-decoration: none;
+    width: fit-content;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .link:hover {
+    border-color: transparent;
+  }
+  p {
+    color: var(--color-third);
+  }
+  .container {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .resume-container {
+    cursor: pointer;
+    min-width: 14.5rem;
+    max-width: 20rem;
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background: #3c3d37;
+    padding-bottom: 1rem;
+    box-shadow:
+      0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  object {
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.3s;
+  }
+  .resume-container:hover > figure > object {
+    transform: scale(1.2);
+  }
+  .dot {
+    display: none;
+    position: absolute;
+    left: calc(50% + 2.65rem);
+    width: 1rem;
+    height: 1rem;
+    bottom: 0;
+    background-image: unset;
+    top: unset;
+    border-radius: 50%;
+    background: var(--color-primary);
+    z-index: 10000;
+  }
+
+  @media only screen and (min-width: 901px) {
+    .dot {
+      display: block;
+    }
+    .resume-container {
+      max-width: 30rem;
+    }
+  }
+</style>

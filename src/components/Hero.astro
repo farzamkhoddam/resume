@@ -1,0 +1,61 @@
+---
+
+---
+
+<div>
+  <section class="w-full m-0">
+    <header
+      class="relative header w-full h-full flex flex-col justify-center items-start">
+      <div class="title">
+        <h1>Farzam Khoddam</h1>
+        <p>Fullstack Developer</p>
+      </div>
+    </header>
+    <div class="image row-start-1">
+      <img class="object-contain" src={"/profile.jpg"} alt={"hero image"} />
+    </div>
+  </section>
+</div>
+<style>
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5.5rem 2rem 2.5rem;
+  }
+  .image {
+    height: 100vh;
+    width: 100%;
+    max-width: none;
+    position: relative;
+    img {
+      object-position: top;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      vertical-align: baseline;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+  }
+  .header {
+    ::before {
+      left: 3rem;
+      top: 50%;
+      z-index: 100;
+    }
+    ::after {
+      top: calc(50% - 10px);
+      left: calc(3rem - 5px);
+    }
+  }
+  @media only screen and (min-width: 901px) {
+    .title {
+      padding: 0;
+    }
+  }
+</style>

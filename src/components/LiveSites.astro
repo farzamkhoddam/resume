@@ -1,0 +1,175 @@
+---
+
+---
+
+<div>
+  <section class="w-full relative">
+    <header
+      class="w-full header col-start-2 flex flex-col justify-start items-start">
+      <h2>My Live Sites</h2>
+    </header>
+    <div class="content content-container row-start-1">
+      <p>
+        <!-- -->You can see other websites code, I'v developed in<!-- -->
+        <strong
+          ><a
+            href="https://github.com/farzamkhoddam/"
+            target="_blank"
+            class="link"
+            rel="noopener noreferrer">Github</a
+          ></strong
+        >
+        <!-- -->but the live ones are here.
+      </p>
+      <figure class="snip1573">
+        <img
+          src="/marabox.jpg"
+          alt="marabox"
+        />
+        <figcaption>
+          <h3>visit website</h3>
+        </figcaption>
+        <a href="https://marabox.com.au" target="_blank"></a>
+      </figure>
+      <figure class="snip1573">
+        <img src="/ytjobs.jpg" alt="ytjobs" />
+        <figcaption>
+          <h3>visit website</h3>
+        </figcaption>
+        <a href="https://ytjobs.co" target="_blank"></a>
+      </figure>
+    </div>
+  </section>
+</div>
+<style>
+  p {
+    width: 100%;
+  }
+  .link {
+    border-bottom: 1px dotted var(--color-secondary);
+    text-decoration: none;
+    width: fit-content;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .snip1573 {
+    background-color: #000;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+    min-width: 14.5rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  .snip1573 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+
+  .snip1573:before,
+  .snip1573:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #000000;
+    border-left: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+    content: "";
+    opacity: 0.9;
+    z-index: 1;
+  }
+
+  .snip1573:before {
+    -webkit-transform: skew(45deg) translateX(-155%);
+    transform: skew(45deg) translateX(-155%);
+  }
+
+  .snip1573:after {
+    -webkit-transform: skew(45deg) translateX(155%);
+    transform: skew(45deg) translateX(155%);
+  }
+
+  .snip1573 img {
+    backface-visibility: hidden;
+    max-width: 100%;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  .snip1573 figcaption {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+  }
+
+  .snip1573 h3 {
+    background-color: #000000;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+  }
+
+  .snip1573 a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  .snip1573:hover > img,
+  .snip1573.hover > img {
+    opacity: 0.5;
+  }
+
+  .snip1573:hover:before,
+  .snip1573.hover:before {
+    -webkit-transform: skew(45deg) translateX(-55%);
+    transform: skew(45deg) translateX(-55%);
+  }
+
+  .snip1573:hover:after,
+  .snip1573.hover:after {
+    -webkit-transform: skew(45deg) translateX(55%);
+    transform: skew(45deg) translateX(55%);
+  }
+
+  .snip1573:hover figcaption,
+  .snip1573.hover figcaption {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+</style>

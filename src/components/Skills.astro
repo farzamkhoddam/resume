@@ -1,0 +1,71 @@
+---
+import { StarIcon } from "./React/Icons/StarIcon";
+---
+
+<div>
+  <section class="w-full relative">
+    <header
+      class="w-full header col-start-2 flex flex-col justify-start items-start">
+      <h2>Skills</h2>
+    </header>
+    <div class="content col-start-1 row-start-1">
+      <p>
+        Hint: The Yellow star means being an expert in the field. The White star
+        means be used in some cases but I am not an expert.
+      </p>
+    </div>
+    <div class="sub-title col-start-2 row-start-2">
+      <h3>React Related</h3>
+    </div>
+    <div class="content skill-container">
+      <div class="skill"><StarIcon /><p>React</p></div>
+      <div class="skill"><StarIcon /><p>Nextjs</p></div>
+      <div class="skill"><StarIcon isWhite={true} /><p>Nodejs</p></div>
+      <div class="skill"><StarIcon /><p>Typescript</p></div>
+      <div class="skill"><StarIcon /><p>SSR</p></div>
+      <div class="skill">
+        <StarIcon isWhite={true} /><p>React testing library</p>
+      </div>
+    </div>
+
+    <div class="sub-title col-start-2">
+      <h3>Css Related</h3>
+    </div>
+    <div class="content skill-container col-start-1 row-start-3">
+      <div class="skill"><StarIcon /><p>Styled components</p></div>
+      <div class="skill"><StarIcon /><p>Tailwind</p></div>
+      <div class="skill"><StarIcon /><p>Scss/Sass</p></div>
+      <div class="skill"><StarIcon /><p>Material UI</p></div>
+      <div class="skill"><StarIcon /><p>Gsap</p></div>
+    </div>
+    <div class="sub-title col-start-2">
+      <h3>Other</h3>
+    </div>
+    <div class="content skill-container row-start-4">
+      <div class="skill"><StarIcon /><p>Git</p></div>
+      <div class="skill"><StarIcon /><p>Restful API</p></div>
+      <div class="skill"><StarIcon isWhite={true} /><p>C#</p></div>
+      <div class="skill"><StarIcon isWhite={true} /><p>.NET</p></div>
+      <div class="skill"><StarIcon isWhite={true} /><p>Redux</p></div>
+      <div class="skill"><StarIcon /><p>sanity (headless CMS)</p></div>
+    </div>
+  </section>
+</div>
+<style>
+  .skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .skill {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  @media only screen and (min-width: 426px) {
+    .skill-container {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      /* padding-bottom: 1rem; */
+    }
+  }
+</style>
