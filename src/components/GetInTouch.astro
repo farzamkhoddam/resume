@@ -2,7 +2,7 @@
 import { GithubIcon } from "./React/Icons/GithubIcon";
 import { LinkedInIcon } from "./React/Icons/LinkedInIcon";
 import { TelegramIcon } from "./React/Icons/TelegramIcon";
-
+const CvScreenshot = "/CV-screenshot.png";
 const PDF = "/CV.pdf";
 ---
 
@@ -15,14 +15,12 @@ const PDF = "/CV.pdf";
     </header>
     <div class="content">
       <a class="resume-container relative" href={PDF} target="_blank">
-        <!-- <a class="absolute inset-0 w-full h-full z-100 cursor-pointer" target="_blank" href={PDF}></a> -->
-        <figure>
-          <object data={PDF} type="application/pdf" width="100%"></object>
-        </figure>
+        <div class="image-container">
+          <img src={CvScreenshot} alt="CV PDF" />
+        </div>
         <div>
           <button class="btn btn-outline">
             <p>Download resume</p>
-            <!-- <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" /> -->
           </button>
         </div>
       </a>
@@ -58,6 +56,7 @@ const PDF = "/CV.pdf";
     </div>
   </section>
 </div>
+
 <style>
   .link {
     color: var(--color-third);
@@ -108,17 +107,17 @@ const PDF = "/CV.pdf";
       0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
-  figure {
+  .image-container {
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
-  object {
+   img {
     height: 100%;
     width: 100%;
     transition: all ease 0.3s;
   }
-  .resume-container:hover > figure > object {
+  .resume-container:hover > div > img {
     transform: scale(1.2);
   }
   .dot {
