@@ -1,4 +1,4 @@
-# Farzam Khoddam's resume
+# Chris Khoddam's resume
 
 #### Video Demo: (https://www.youtube.com/watch?v=EgVfQdnjI4g&ab_channel=farzamkhoddam)
 
